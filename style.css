@@ -93,4 +93,6 @@
 /* For hover effect on links in menu section */
 .menu .btn1:hover, .btn2:hover , .btn2:hover, .btn4:hover{
     background-color: #005f5f;
+
+.error {
 }
