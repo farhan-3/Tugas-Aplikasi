@@ -97,3 +97,15 @@
 .error {
     color: red;
 }
+
+/* For validation page */
+#content_evaluation {
+    text-align: center;
+  }
+#content_evaluation table {
+    margin: auto;
+    text-align: left;
+}
+th, .confirmasi{
+    text-align: center;
+}
