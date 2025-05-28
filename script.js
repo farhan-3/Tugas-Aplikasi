@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
       errJK.textContent = '';
       return true;
   }
-
+// For keluhan validation
   function isValidateKeluhan(){
       if (keluhan.value === ''){
           errKeluhan.textContent = 'Pilih jenis keluhan.';
