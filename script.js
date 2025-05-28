@@ -87,8 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
     errUmur.textContent = "";
     return true;
   }
-  
-
+// For date validation
   function isValidDate() {
       if (tanggal.value === '') {
           errTanggal.textContent = 'Pilih tanggal';
@@ -112,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
       errTanggal.textContent = '';
       return true;
   }
-
+// For gender selection validation
   function isValidGender(){
       const formData = new FormData(form);
       const gender = formData.get("jk");
@@ -123,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
       errJK.textContent = '';
       return true;
   }
-// For keluhan validation
+// For keluhan validatoin
   function isValidateKeluhan(){
       if (keluhan.value === ''){
           errKeluhan.textContent = 'Pilih jenis keluhan.';
