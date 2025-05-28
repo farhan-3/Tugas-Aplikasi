@@ -93,15 +93,15 @@ document.addEventListener('DOMContentLoaded', function() {
           errTanggal.textContent = 'Pilih tanggal';
           return false;
       }
-
+      // selected date
       const selectedParts = tanggal.value.split('-');
       const selectedYear = parseInt(selectedParts[0]);
       const selectedMonth = parseInt(selectedParts[1]);
       const selectedDay = parseInt(selectedParts[2]);
       const selectedDate = new Date(selectedYear, selectedMonth - 1, selectedDay);
 
-      const today = new Date();
-      today.setHours(0, 0, 0, 0);
+      const today = new Date(); // today's date
+      today.setHours(0, 0, 0, 0); // remove time
 
       if (selectedDate <= today) {
           errTanggal.textContent = "Pilih tanggal di masa depan, bukan hari ini atau sebelumnya.";
