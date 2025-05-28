@@ -26,6 +26,7 @@
     align-items: center;
     display: flex;
     gap: 50px;
+    align-items: center;
     background: linear-gradient(135deg, #007A74, #1C1C1C);
     padding: 30px;
     border-radius: 15px;
@@ -91,11 +92,19 @@
 }
 
 /* For hover effect on links in menu section */
-.menu .btn1:hover, .btn2:hover , .btn2:hover, .btn4:hover{
+.menu .btn1:hover, .btn2:hover , .btn3:hover, .btn4:hover{
     background-color: #005f5f;
+}
 
 .error {
     color: red;
+    font-size: 0.9em;
+  }
+  
+#form_submittion {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 /* For validation page */
