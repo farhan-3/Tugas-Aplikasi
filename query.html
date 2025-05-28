@@ -4,92 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Halaman Kedua">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script defer src="script.js"></script> <!-- Tambahkan defer agar JS menunggu DOM selesai -->
     <title>Document</title>
 </head>
 
 <body>
-    <!-- All the sections on this webpage are within this div, which has the class "container" -->
     <div class="container">
-        <!-- The following div is used for the header section -->
         <div class="header"><h1>Spesialis Saraf</h1></div>
-        <!-- The following div is used for the menu section -->
+
         <div class="menu">
             <a href="index.html" class="btn1">Home</a>
             <a href="query.html" class="btn2">Form</a>
-            <a href="evaluation.html" class="btn3">Evaluation</a>
-            <a href="aboutus.html" class="btn4">About Us</a>
+            <a href="#" class="btn3">Evaluation</a>
+            <a href="#" class="btn4">About Us</a>
         </div>
-        <!-- The following div is used for the sidebar section -->
+
         <div class="sidebar">
             <h2>Tips</h2>
             <b>1. Olahraga Teratur </b>
             <p>Olahraga yang dilakukan secara teratur dapat membantu mencegah berbagai gangguan saraf</p>
             <b>2. Hindari Aktivitas Berulang</b>
             <p>Pekerjaan dengan gerakan berulang dapat memicu gangguan saraf. Istirahat dan lakukan peregangan secara berkala.</p>
-            <b>3.Jaga Berat Badan Ideal</b>
-            <p> berat badan dapat meningkatkan beban pada kaki, dan memicu berbagai risiko penyakit kardiovaskuler.</p>
-            <b>4.Penuhi Asupan Vitamin B</b>
-            <p> Dalam hal menjaga kesehatan saraf, vitamin B merupakan salah satu jenis vitamin yang memiliki peranan penting</p>
-            <b>5. Alkohol </b>
-            <p> mengonsumsi alkohol dapat meningkatkan risiko gangguan saraf. dikarenakan alkohol dapat mengganggu penyerapan vitamin B yang baik untuk saraf.</p>
+            <b>3. Jaga Berat Badan Ideal</b>
+            <p>Berat badan dapat meningkatkan beban pada kaki, dan memicu berbagai risiko penyakit kardiovaskuler.</p>
+            <b>4. Penuhi Asupan Vitamin B</b>
+            <p>Vitamin B memiliki peranan penting dalam menjaga kesehatan saraf.</p>
+            <b>5. Alkohol</b>
+            <p>Mengonsumsi alkohol dapat meningkatkan risiko gangguan saraf karena mengganggu penyerapan vitamin B.</p>
         </div>
-        <!-- The following div is used for the content section -->
+
         <div class="content">
             <h2>Formulir Konsultasi Spesialis Syaraf</h2>
             <form id="formSyaraf">
-              <label for="nama">Nama Lengkap:</label><br>
-              <input type="text" id="nama"><br>
-              <div id="errNama" class="error"></div><br>
+                <label for="nama">Nama Lengkap:</label><br>
+                <input type="text" id="nama"><br>
+                <div id="errNama" class="error"></div><br>
 
-              <label for="email">Email:</label><br>
-              <input type="text" id="email"><br>
-              <div id="errEmail" class="error"></div><br>
+                <label for="email">Email:</label><br>
+                <input type="text" id="email"><br>
+                <div id="errEmail" class="error"></div><br>
 
-              <label for="umur">Umur:</label><br>
-              <input type="text" id="umur"><br>
-              <div id="errUmur" class="error"></div><br>
+                <label for="umur">Umur:</label><br>
+                <input type="text" id="umur"><br>
+                <div id="errUmur" class="error"></div><br>
 
-              <label for="tanggal">Tanggal Konsultasi:</label><br>
-              <input type="date" id="tanggal" placeholder="YYYY-MM-DD"><br>
-              <div id="errTanggal" class="error"></div><br>
+                <label for="tanggal">Tanggal Konsultasi:</label><br>
+                <input type="date" id="tanggal"><br>
+                <div id="errTanggal" class="error"></div><br>
 
-              <label>Jenis Kelamin:</label><br>
-              <input type="radio" name="jk" value="Laki-laki"> Laki-laki
-              <input type="radio" name="jk" value="Perempuan"> Perempuan<br>
-              <div id="errJK" class="error"></div><br>
+                <label>Jenis Kelamin:</label><br>
+                <input type="radio" name="jk" value="Laki-laki"> Laki-laki
+                <input type="radio" name="jk" value="Perempuan"> Perempuan<br>
+                <div id="errJK" class="error"></div><br>
 
-              <label for="keluhan">Jenis Keluhan:</label><br>
-              <select id="keluhan">
-                <option value=""></option>
-                <option value="Kejepit">Epilepsi</option>
-                <option value="Epilepsi">Alzeimer</option>
-                <option value="Migrain">Parkinson</option>
-              </select><br>
-              <div id="errKeluhan" class="error"></div><br>
-              
-              <label>Gejala Tambahan:</label><br>
-              <textarea id="gejala"></textarea><br>
-              <div id="errGejala" class="error"></div><br>
+                <label for="keluhan">Jenis Keluhan:</label><br>
+                <select id="keluhan">
+                    <option value="">...</option>
+                    <option value="Kejepit">Saraf Kejepit</option>
+                    <option value="Epilepsi">Epilepsi</option>
+                    <option value="Migrain">Migrain</option>
+                </select><br>
+                <div id="errKeluhan" class="error"></div><br>
 
-              <label for="kodePasien">Kode Pasien:</label><br>
-              <input type="text" id="kodePasien" placeholder="6 Kode Alfanumerik"><br>
-              <div id="errKode" class="error"></div><br>
+                <label>Gejala Tambahan:</label><br>
+                <textarea id="gejala"></textarea><br>
+                <div id="errGejala" class="error"></div><br>
 
-              <label>
-                <input type="checkbox" id="setuju"> Saya menyetujui syarat & ketentuan
-              </label><br>
-              <div id="errSetuju" class="error"></div><br>
+                <label for="kodePasien">Kode Pasien:</label><br>
+                <input type="text" id="kodePasien" placeholder="6 Kode Alfanumerik"><br>
+                <div id="errKode" class="error"></div><br>
 
-              <input type="submit" value="Kirim">
-              <div id="form_submittion"></div>
-            </form>                 
+                <label>
+                    <input type="checkbox" id="setuju"> Saya menyetujui syarat & ketentuan
+                </label><br>
+                <div id="errSetuju" class="error"></div><br>
+
+                <input type="submit" value="Kirim">
+
+                <div id="form_submittion"></div>
+            </form>
         </div>
-        <!-- The following div is used for the footer section -->
         <div class="footer"><p>© 2025 DPW2024-2-B04</p></div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
