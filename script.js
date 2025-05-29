@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const umurValue = umur.value; 
   
     if (!umurValue) {
-      errUmur.textContent = "Umur harus diisi.";
+      errUmur.textContent = "Umur wajib diisi.";
       return false;
     } else if (!/^\d+$/.test(umurValue)) {
       errUmur.textContent = "Umur harus berupa angka.";
