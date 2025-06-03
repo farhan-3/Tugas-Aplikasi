@@ -118,3 +118,60 @@ table {
 th, .confirmasi{
     text-align: center;
 }
+
+/* for about us page */
+.allcard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cardwrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  text-align: center;
+}
+
+.card {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.tabeltugas table {
+  margin-top: 10px;
+  border: 1px solid black;
+  width: 100%;
+}
+
+.tabeltugas th, .tabeltugas td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.referensilink {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.referensilink table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+    border: 1px solid black;
+}
+
+.referensilink th, .referensilink td {
+    border: 1px solid black; 
+    padding: 8px;
+    text-align: center;
+}
+
+.referensilink a {
+    color: blue;
+    text-decoration: underline;
+}

@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
   var keluhan = document.getElementById("keluhan");
   var form = document.getElementById("formSyaraf");
   var form_submittion = document.getElementById("form_submittion");
+  var gejala = document.getElementById("gejala");
+  var kodePasien = document.getElementById("kodePasien");
+  var setuju = document.getElementById("setuju");
+
 
   var errNama = document.getElementById("errNama");
   var errEmail = document.getElementById("errEmail");
@@ -13,6 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
   var errTanggal = document.getElementById("errTanggal");
   var errJK = document.getElementById("errJK");
   var errKeluhan = document.getElementById("errKeluhan");
+  var errGejala = document.getElementById("errGejala");
+  var errKode = document.getElementById("errKode");
+  var errSetuju = document.getElementById("errSetuju");
 
   form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -26,16 +33,22 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function isValidForm(){
-      if(form_submittion) form_submittion.textContent = '';
-      let validNama = isValidNama();
-      let validEmail = isValidEmail();
-      let validUmur = isValidUmur();
-      let validTanggal = isValidDate();
-      let validGender = isValidGender();
-      let validKeluhan = isValidateKeluhan();
-      
-      return validNama && validEmail && validUmur && validTanggal && validGender && validKeluhan;
-  }
+    if(form_submittion) form_submittion.textContent = '';
+    let validNama = isValidNama();
+    let validEmail = isValidEmail();
+    let validUmur = isValidUmur();
+    let validTanggal = isValidDate();
+    let validGender = isValidGender();
+    let validKeluhan = isValidateKeluhan();
+    let validGejala = isValidGejala();
+    let validKode = isValidKodePasien();
+    let validSetuju = isValidSetuju();
+
+    return validNama && validEmail && validUmur && validTanggal &&
+           validGender && validKeluhan && validGejala &&
+           validKode && validSetuju;
+}
+
 
   function isValidNama() {
     if (nama.value === '') {
@@ -131,6 +144,39 @@ document.addEventListener('DOMContentLoaded', function() {
       errKeluhan.textContent = '';
       return true;
   }
+// for gejala tambahan
+  function isValidGejala() {
+    if (gejala.value.trim() === '') {
+        errGejala.textContent = 'Gejala tambahan wajib diisi.';
+        return false;
+    }
+    errGejala.textContent = '';
+    return true;
+}
+
+// for validasi code pasien
+function isValidKodePasien() {
+    const kode = kodePasien.value.trim();
+    const kodePattern = /^[A-Za-z0-9]{6}$/;
+
+    if (kode === '') {
+        errKode.textContent = 'Kode pasien wajib diisi.';
+        return false;
+    }
+    errKode.textContent = '';
+    return true;
+}
+
+// for validasi menyetujui
+function isValidSetuju() {
+    if (!setuju.checked) {
+        errSetuju.textContent = 'Anda harus menyetujui syarat & ketentuan.';
+        return false;
+    }
+    errSetuju.textContent = '';
+    return true;
+}
+
 });
 
 // document.getElementById('confirmasi1').checked = true;
