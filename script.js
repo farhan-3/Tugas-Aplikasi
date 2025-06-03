@@ -4,12 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
   var umur = document.getElementById("umur");
   var tanggal = document.getElementById("tanggal");
   var keluhan = document.getElementById("keluhan");
-  var form = document.getElementById("formSyaraf");
-  var form_submittion = document.getElementById("form_submittion");
-  var gejala = document.getElementById("gejala");
   var kodePasien = document.getElementById("kodePasien");
   var setuju = document.getElementById("setuju");
 
+  var form = document.getElementById("formSyaraf");
+  var form_submittion = document.getElementById("form_submittion");
 
   var errNama = document.getElementById("errNama");
   var errEmail = document.getElementById("errEmail");
@@ -17,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
   var errTanggal = document.getElementById("errTanggal");
   var errJK = document.getElementById("errJK");
   var errKeluhan = document.getElementById("errKeluhan");
-  var errGejala = document.getElementById("errGejala");
   var errKode = document.getElementById("errKode");
   var errSetuju = document.getElementById("errSetuju");
 
@@ -25,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
       if (isValidForm()){
           if(form_submittion) {
-            form_submittion.textContent = 'Form Submitted Successfully.';
+            form_submittion.textContent = 'Form berhasil dikirim.';
           }
           form.reset(); 
           return true;
@@ -33,22 +31,19 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function isValidForm(){
-    if(form_submittion) form_submittion.textContent = '';
-    let validNama = isValidNama();
-    let validEmail = isValidEmail();
-    let validUmur = isValidUmur();
-    let validTanggal = isValidDate();
-    let validGender = isValidGender();
-    let validKeluhan = isValidateKeluhan();
-    let validGejala = isValidGejala();
-    let validKode = isValidKodePasien();
-    let validSetuju = isValidSetuju();
+      if(form_submittion) form_submittion.textContent = '';
+      let validNama = isValidNama();
+      let validEmail = isValidEmail();
+      let validUmur = isValidUmur();
+      let validTanggal = isValidDate();
+      let validGender = isValidGender();
+      let validKeluhan = isValidateKeluhan();
+      let validKode = isValidKodePasien();
+      let validSetuju = isValidSetuju();
 
-    return validNama && validEmail && validUmur && validTanggal &&
-           validGender && validKeluhan && validGejala &&
-           validKode && validSetuju;
-}
-
+      return validNama && validEmail && validUmur && validTanggal &&
+             validGender && validKeluhan && validKode && validSetuju;
+  }
 
   function isValidNama() {
     if (nama.value === '') {
@@ -85,7 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function isValidUmur() {
     const umurValue = umur.value; 
-  
     if (!umurValue) {
       errUmur.textContent = "Umur wajib diisi.";
       return false;
@@ -96,35 +90,34 @@ document.addEventListener('DOMContentLoaded', function() {
       errUmur.textContent = "Umur minimal 2 digit.";
       return false;
     }
-  
     errUmur.textContent = "";
     return true;
   }
-// For date validation
+
   function isValidDate() {
       if (tanggal.value === '') {
-          errTanggal.textContent = 'Pilih tanggal';
+          errTanggal.textContent = 'Pilih tanggal.';
           return false;
       }
-      // selected date
       const selectedParts = tanggal.value.split('-');
-      const selectedYear = parseInt(selectedParts[0]);
-      const selectedMonth = parseInt(selectedParts[1]);
-      const selectedDay = parseInt(selectedParts[2]);
-      const selectedDate = new Date(selectedYear, selectedMonth - 1, selectedDay);
+      const selectedDate = new Date(
+          parseInt(selectedParts[0]),
+          parseInt(selectedParts[1]) - 1,
+          parseInt(selectedParts[2])
+      );
 
-      const today = new Date(); // today's date
-      today.setHours(0, 0, 0, 0); // remove time
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
 
       if (selectedDate <= today) {
-          errTanggal.textContent = "Pilih tanggal di masa depan, bukan hari ini atau sebelumnya.";
+          errTanggal.textContent = "Pilih tanggal di masa depan.";
           return false;
       }
 
       errTanggal.textContent = '';
       return true;
   }
-// For gender selection validation
+
   function isValidGender(){
       const formData = new FormData(form);
       const gender = formData.get("jk");
@@ -135,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
       errJK.textContent = '';
       return true;
   }
-// For keluhan validatoin
+
   function isValidateKeluhan(){
       if (keluhan.value === ''){
           errKeluhan.textContent = 'Pilih jenis keluhan.';
@@ -144,40 +137,33 @@ document.addEventListener('DOMContentLoaded', function() {
       errKeluhan.textContent = '';
       return true;
   }
-// for gejala tambahan
-  function isValidGejala() {
-    if (gejala.value.trim() === '') {
-        errGejala.textContent = 'Gejala tambahan wajib diisi.';
-        return false;
-    }
-    errGejala.textContent = '';
-    return true;
-}
 
-// for validasi code pasien
-function isValidKodePasien() {
-    const kode = kodePasien.value.trim();
-    const kodePattern = /^[A-Za-z0-9]{6}$/;
+  function isValidKodePasien() {
+      const kode = kodePasien.value.trim();
+      const kodePattern = /^[A-Za-z0-9]{6}$/;
 
-    if (kode === '') {
-        errKode.textContent = 'Kode pasien wajib diisi.';
-        return false;
-    }
-    errKode.textContent = '';
-    return true;
-}
+      if (kode === '') {
+          errKode.textContent = 'Kode pasien wajib diisi.';
+          return false;
+      }
+      if (!kodePattern.test(kode)) {
+          errKode.textContent = 'Kode harus 6 karakter alfanumerik.';
+          return false;
+      }
+      errKode.textContent = '';
+      return true;
+  }
 
-// for validasi menyetujui
-function isValidSetuju() {
-    if (!setuju.checked) {
-        errSetuju.textContent = 'Anda harus menyetujui syarat & ketentuan.';
-        return false;
-    }
-    errSetuju.textContent = '';
-    return true;
-}
-
+  function isValidSetuju() {
+      if (!setuju.checked) {
+          errSetuju.textContent = 'Anda harus menyetujui syarat & ketentuan.';
+          return false;
+      }
+      errSetuju.textContent = '';
+      return true;
+  }
 });
+
 
 // document.getElementById('confirmasi1').checked = true;
 // document.getElementById('confirmasi2').checked = false;
