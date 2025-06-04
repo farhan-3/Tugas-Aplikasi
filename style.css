@@ -111,9 +111,21 @@
 #content_evaluation {
     text-align: center;
   }
-table {
+
+.evaluation_table{
+    border: 1px solid black;
     margin: auto;
     text-align: left;
+}
+
+.evaluation_table th, .evaluation_table td{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+
+th, .confirmasi{
+    text-align: center;
 }
 th, .confirmasi{
     text-align: center;
