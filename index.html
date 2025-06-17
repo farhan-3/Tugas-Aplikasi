@@ -2,45 +2,45 @@
 <html lang="id">
 
 <head>
+    <!-- Metadata dasar HTML -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Halaman Pertama">
+    <!-- Deskripsi halaman -->
+    <meta name="description" content="halaman ini berisi informasi seputar penyakit saraf, jenis-jenisnya, dan penanganannya. Dibuat dengan HTML dasar dan ada 5 section: Header, Menu, Konten, Sidebar, dan Footer.">
+    <!-- Menghubungkan file CSS eksternal -->
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <!-- Judul halaman -->
+    <title>Homepage</title>
 </head>
 
 <body>
-    <!-- All the sections on this webpage are within this div, which has the class "container" -->
+    <!-- Container utama yang membungkus semua section -->
     <div class="container">
-        <!-- The following div is used for the header section -->
-        <div class="header">
-            <h1>Spesialis Saraf</h1>
-        </div>
-        <!-- The following div is used for the menu section -->
+        <!-- ================= Header Section ================= -->
+        <div class="header"><h1>Spesialis Saraf</h1></div>
+        <!-- ================= Menu Navigasi ================= -->
         <div class="menu">
             <a href="index.html" class="btn1">Home</a>
             <a href="query.html" class="btn2">Form</a>
             <a href="evaluation.html" class="btn3">Evaluation</a>
             <a href="aboutus.html" class="btn4">About Us</a>
-        
-        
         </div>
-        <!-- The following div is used for the sidebar section -->
+        <!-- ================= Sidebar ================= -->
         <div class="sidebar">
             <h2>Tips</h2>
             <b>1. Olahraga Teratur </b>
-            <p>Olahraga yang dilakukan secara teratur dapat membantu mencegah berbagai gangguan saraf</p>
+            <p>Olahraga yang dilakukan secara teratur dapat membantu mencegah berbagai gangguan saraf.</p>
             <b>2. Hindari Aktivitas Berulang</b>
             <p>Pekerjaan dengan gerakan berulang dapat memicu gangguan saraf. Istirahat dan lakukan peregangan secara berkala.</p>
-            <b>3.Jaga Berat Badan Ideal</b>
-            <p> berat badan dapat meningkatkan beban pada kaki, dan memicu berbagai risiko penyakit kardiovaskuler.</p>
-            <b>4.Penuhi Asupan Vitamin B</b>
-            <p> Dalam hal menjaga kesehatan saraf, vitamin B merupakan salah satu jenis vitamin yang memiliki peranan penting</p>
-            <b>5. Alkohol </b>
-            <p> mengonsumsi alkohol dapat meningkatkan risiko gangguan saraf. dikarenakan alkohol dapat mengganggu penyerapan vitamin B yang baik untuk saraf.</p>
+            <b>3. Jaga Berat Badan Ideal</b>
+            <p>Berat badan dapat meningkatkan beban pada kaki, dan memicu berbagai risiko penyakit kardiovaskuler.</p>
+            <b>4. Penuhi Asupan Vitamin B</b>
+            <p>Vitamin B memiliki peranan penting dalam menjaga kesehatan saraf.</p>
+            <b>5. Hindari Alkohol</b>
+            <p>Mengonsumsi alkohol dapat meningkatkan risiko gangguan saraf karena mengganggu penyerapan vitamin B.</p>
         </div>
-        <!-- The following div is used for the content section -->
-        <div class="content">
+        <!-- ================= Konten Utama ================= -->
+        <div class="content" id="index">
             <h2>Pengertian Penyakit Saraf</h2>
             <p>Penyakit saraf merupakan suatu kondisi di mana sistem saraf mengalami gangguan, kerusakan, dan kelainan
                 sehingga dapat memengaruhi fungsinya. Ketika sistem saraf ini mengalami gangguan, maka bisa menyebabkan
@@ -65,6 +65,9 @@
             <p>Berikut merupakan beberapa jenis penyakit pada sistem saraf yang mungkin dapat terjadi dan patut untuk
                 diwaspadai, antara lain: </p>
             <h2>Epilepsi</h2>
+            <div class="img">
+                <img src="assets/epilepsi.png" alt="">
+            </div>
             <p>Melansir dari website World of Organization (WHO), penderita epilepsi di dunia mencapai 50 juta orang.
                 Epilepsi merupakan gangguan yang menyebabkan seseorang mengalami kejang berulang. Kondisi ini bisa
                 menyerang siapa saja, baik pria maupun wanita dari berbagai kalangan usia. </p>
@@ -72,6 +75,9 @@
                 disinyalir dapat meningkatkan risiko epilepsi. Mulai dari; pengaruh genetik karena memiliki keluarga
                 yang menderita epilepsi, demensia, stroke, cerebral palsy, meningitis, cedera kepala.</p>
             <h2>Alzheimer</h2>
+            <div class="img">
+                <img src="assets/alzheimer.png" alt="">
+            </div>
             <p>Alzheimer merupakan penyakit di bagian otak yang mengakibatkan terjadinya perubahan perilaku, penurunan
                 daya ingat, dan lainnya. Ketika mengalami kondisi ini, maka dapat menyebabkan penderitanya mengalami
                 linglung, cemas, bahkan mencurigai orang lain. </p>
@@ -82,6 +88,9 @@
                 diawali dengan pikun (mudah lupa), sulit mengenali wajah orang di sekitar, sulit berkomunikasi dengan
                 orang lain. </p>
             <h2>Parkinson</h2>
+            <div class="img">
+                <img src="assets/paekins.jpg" alt="">
+            </div>
             <p>Parkinson’s disease atau parkinson merupakan penyakit pada sistem saraf pusat yang memengaruhi kemampuan
                 tubuh dalam mengendalikan keseimbangan tubuh dan gerakan. Kondisi ini biasanya disebabkan karena terjadi
                 penurunan dopamine di dalam otak akibat kematian sel saraf di bagian substansia nigra.</p>
@@ -89,10 +98,19 @@
                 meningkat, hilangnya kemampuan dalam membaui sesuatu, gangguan postur dan keseimbangan, kekauan dalam
                 menggerakkan anggota tubuh, kesulitan ketika bangun dari tempat tidur maupun kursi. </p>
             <h2>Meningitis</h2>
+            <div class="img">
+                <img src="assets/meningitis.png" alt="">
+            </div>
             <p>Peradangan pada saraf tulang belakang dan selaput pelindung otak. Kondisinya biasanya disebabkan karena jamur, bakteri, dan virus yang berasal dari rongga mulut, tenggorokan, telinga, dan sinus.</p>
             <h2>Multiple Sclerosis</h2>
+            <div class="img">
+                <img src="assets/multisce.jpg" alt="">
+            </div>
             <p>Penyakit yang disebabkan karena gangguan autoimun sehingga menyebabkan sumsum tulang belakang dan otak terganggu. Kondisi ini umum terjadi karena imun di tubuh keliru menyerang mielin—lapisan lemak yang tugasnya adalah melindungi serabut saraf.</p>
             <h2>Cerebral Palsy</h2>
+            <div class="img">
+                <img src="assets/cerebral.png" alt="">
+            </div>
             <p>Penyakit saraf yang umum terjadi pada anak-anak dan bisa memengaruhi kemampuan motoriknya dan kondisi tubuhnya. Penderita yang mengalami kondisi ini dapat merasakan masalah di tulang belakang, persendian, pengucapan, pendengaran, dan lainnya.</p>
 
             <a href="https://www.rspremierjatinegara.com/artikel/berbagai-penyakit-yang-dapat-pengaruhi-sistem-saraf"
@@ -110,9 +128,9 @@
             </ul>
             <p>Neurolog Anda mungkin juga akan memerintahkan tes darah, urin, atau cairan tubuh lainnya untuk memahami tingkat keparahan kondisi atau memeriksa kadar obat dalam tubuh. Tes genetik mungkin dilakukan untuk mengidentifikasi gangguan yang diturunkan. Mungkin juga akan dilakukan pencitraan sistem saraf Anda untuk membantu dalam proses diagnosis.</p>
             <h3>Apa itu ahli saraf?</h3>
-            <p>Seorang ahli saraf adalah seorang dokter medis yang mendiagnosa, mengobati dan mengelola gangguan otak dan sistem saraf (otak, sumsum tulang belakang dan saraf). Seorang ahli saraf tahu anatomi, fungsi dan kondisi yang mempengaruhi saraf dan sistem saraf. Sistem saraf Anda adalah pusat komando tubuh Anda. Ini mengontrol segala sesuatu yang Anda pikirkan, rasakan dan lakukan – dari menggerakkan lengan Anda ke detak jantung Anda.</p>
+            <p>Seorang ahli saraf adalah seorang dokter medis yang mendiagnosa, mengobati dan mengelola gangguan otak dan sistem saraf (otak, sumsum tulang belakang dan saraf). Seorang ahli saraf tahu anatomi, fungsi dan kondisi yang mempengaruhi saraf dan sistem saraf. Sistem saraf Anda adalah pusat komando tubuh Anda. Ini mengontrol segala sesuatu yang Anda pikirkan, rasakan dan lakukan dari menggerakkan lengan Anda ke detak jantung Anda.</p>
             <h3>Apa itu ahli saraf pediatrik?</h3>
-            <p>Seorang ahli saraf pediatrik adalah seorang dokter medis yang mendiagnosis, mengobati dan mengelola gangguan otak dan sistem saraf pada anak-anak – dari bayi yang baru lahir hingga remaja. Banyak kondisi yang mereka rawat sama dengan yang terlihat pada orang dewasa, selain kondisi warisan dan perkembangan.</p>
+            <p>Seorang ahli saraf pediatrik adalah seorang dokter medis yang mendiagnosis, mengobati dan mengelola gangguan otak dan sistem saraf pada anak-anak dari bayi yang baru lahir hingga remaja. Banyak kondisi yang mereka rawat sama dengan yang terlihat pada orang dewasa, selain kondisi warisan dan perkembangan.</p>
             <h3>Apa itu seorang ahli bedah saraf?</h3>
             <p>Seorang ahli bedah saraf adalah seorang dokter medis yang melakukan operasi pada otak, sumsum tulang belakang dan saraf.</p>
             <h3>Jenis tes apa yang diperintahkan oleh ahli saraf?</h3>
@@ -134,11 +152,8 @@
             </ul>
             <a href="https://my.clevelandclinic.org/health/articles/22277-neurologist" target="_blank">Selengkapnya</a>
         </div>
-        <!-- The following div is used for the footer section -->
-        <div class="footer">
-            <p>© 2025 DPW2024-2-B04</p>
-        </div>
+        <!-- ================= Footer ================= -->
+        <div class="footer"><p>© 2025 DPW2024-2-B04</p></div>
     </div>
 </body>
-
 </html>

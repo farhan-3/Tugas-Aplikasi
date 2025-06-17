@@ -2,89 +2,92 @@
 <html lang="id">
 
 <head>
+    <!-- Metadata dasar HTML -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Halaman Ketiga">
+    <!-- Deskripsi halaman -->
+    <meta name="description" content="halaman ini berisi informasi atas evaluasi pekerjaan terhadap kesesuaian penugasan website. Dibuat dengan HTML dasar dan ada 5 section: Header, Menu, Konten, Sidebar, dan Footer.">
+    <!-- Menghubungkan file CSS eksternal -->
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <!-- Judul halaman -->
+    <title>Evaluation</title>
 </head>
 
 <body>
-    <!-- All the sections on this webpage are within this div, which has the class "container" -->
+    <!-- Container utama yang membungkus semua section -->
     <div class="container">
-        <!-- The following div is used for the header section -->
+        <!-- ================= Header Section ================= -->
         <div class="header">
             <h1>Spesialis Saraf</h1>
         </div>
-        <!-- The following div is used for the menu section -->
+        <!-- ================= Menu Navigasi ================= -->
         <div class="menu">
             <a href="index.html" class="btn1">Home</a>
             <a href="query.html" class="btn2">Form</a>
             <a href="evaluation.html" class="btn3">Evaluation</a>
             <a href="aboutus.html" class="btn4">About Us</a>
         </div>
-        <!-- The following div is used for the sidebar section -->
+        <!-- ================= Sidebar ================= -->
         <div class="sidebar">
             <h2>Tips</h2>
             <b>1. Olahraga Teratur </b>
-            <p>Olahraga yang dilakukan secara teratur dapat membantu mencegah berbagai gangguan saraf</p>
+            <p>Olahraga yang dilakukan secara teratur dapat membantu mencegah berbagai gangguan saraf.</p>
             <b>2. Hindari Aktivitas Berulang</b>
             <p>Pekerjaan dengan gerakan berulang dapat memicu gangguan saraf. Istirahat dan lakukan peregangan secara berkala.</p>
-            <b>3.Jaga Berat Badan Ideal</b>
-            <p> berat badan dapat meningkatkan beban pada kaki, dan memicu berbagai risiko penyakit kardiovaskuler.</p>
-            <b>4.Penuhi Asupan Vitamin B</b>
-            <p> Dalam hal menjaga kesehatan saraf, vitamin B merupakan salah satu jenis vitamin yang memiliki peranan penting</p>
-            <b>5. Alkohol </b>
-            <p> mengonsumsi alkohol dapat meningkatkan risiko gangguan saraf. dikarenakan alkohol dapat mengganggu penyerapan vitamin B yang baik untuk saraf.</p>
+            <b>3. Jaga Berat Badan Ideal</b>
+            <p>Berat badan dapat meningkatkan beban pada kaki, dan memicu berbagai risiko penyakit kardiovaskuler.</p>
+            <b>4. Penuhi Asupan Vitamin B</b>
+            <p>Vitamin B memiliki peranan penting dalam menjaga kesehatan saraf.</p>
+            <b>5. Hindari Alkohol</b>
+            <p>Mengonsumsi alkohol dapat meningkatkan risiko gangguan saraf karena mengganggu penyerapan vitamin B.</p>
         </div>
-        <!-- The following div is used for the content section -->
+        <!-- ================= Konten Utama ================= -->
         <div class="content" id="content_evaluation">
-            <h3>Evaluation</h3>
-            <table>
+            <h2 class="abs">Evaluation</h2>
+            <table class="evaluation_table">
                 <tr>
                     <th>Ringkasan Tugas</th>
                     <th>Konfirmasi oleh <br>Kelompok:</th>
                 </tr>
                 <tr>
-                    <td>1. Kelengkapan bagian-bagian <br> (Header, Menu, Konten, Sidebar, dan Footer)</td>
+                    <td>Kelengkapan Section (Header, Menu, Content, Sidebar, Footer)</td>
                     <td class="confirmasi"><input type="checkbox" id="confirmasi1"></td>
                 </tr>
                 <tr>
-                    <td>2. Kelengkapan jumlah halaman <br> (4 halaman web)</td>
+                    <td>Kelengkapan Jumlah Halaman (Homepage, Formpage, Evaluation Page, About Us Page)</td>
                     <td class="confirmasi"><input type="checkbox" id="confirmasi2"></td>
                 </tr>
                 <tr>
-                    <td>3. Penamaan beranda yang sesuai</td>
+                    <td>Kesesuaian nama file untuk Halaman utama/Homepage (index.html)</td>
                     <td class="confirmasi"><input type="checkbox" id="confirmasi3"></td>
                 </tr>
                 <tr>
-                    <td>4. Kelengkapan elemen input pada formulir <br> (Input numerik, Input alfabetik, Input alfanumerik, <br>dan Input dengan format email)</td>
+                    <td>Kelengkapan penggunaan elemen HTML form yang digunakan sebagai field masukan (Input numerik, Input alfabetik, Input alfanumerik, dan Input dengan format email)</td>
                     <td class="confirmasi"><input type="checkbox" id="confirmasi4"></td>
                 </tr>
                 <tr>
-                    <td>5. Kelengkapan jenis validasi formulir <br> (Kolom wajib diisi, Validasi tanggal, <br> dan Validasi panjang digit/karakter tertentu)</td>
+                    <td>Kelengkapan penerapan jenis validasi form (Kolom wajib diisi, Validasi tanggal, dan Validasi panjang digit/karakter tertentu)</td>
                     <td class="confirmasi"><input type="checkbox" id="confirmasi5"></td>
                 </tr>
                 <tr>
-                    <td>6. Kesesuaian pesan kesalahan validasi</td>
+                    <td>Kesesuaian pesan error validasi form</td>
                     <td class="confirmasi"><input type="checkbox" id="confirmasi6"></td>
                 </tr>
                 <tr>
-                    <td>7. Konsistensi desain antar halaman</td>
+                    <td>Konsistensi desain antar halaman</td>
                     <td class="confirmasi"><input type="checkbox" id="confirmasi7"></td>
                 </tr>
                 <tr>
-                    <td>8. Kesesuaian dengan tema yang dipilih <br> (Spesialis Saraf)</td>
+                    <td>Kesesuaian website terhadap tema (Spesialis Saraf)</td>
                     <td class="confirmasi"><input type="checkbox" id="confirmasi8"></td>
                 </tr>
             </table>
         </div>
-        <!-- The following div is used for the footer section -->
+        <!-- ================= Footer ================= -->
         <div class="footer">
             <p>© 2025 DPW2024-2-B04</p>
         </div>
     </div>
-    <script src="script3.js"></script>
+    <script src="eval.js"></script>
 </body>
-
 </html>
